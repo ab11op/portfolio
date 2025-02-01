@@ -4,97 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akash Bhagat - Backend Engineer</title>
-    <link rel="stylesheet" href="styles/style.css"> <!-- Ensure this path is correct -->
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/sections.css">
+    <link rel="stylesheet" href="styles/dark-mode.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Dark Mode Toggle Button -->
-    <div class="dark-mode-toggle">
-        <i class="fas fa-moon"></i>
-    </div>
+    <!-- Header Component -->
+    <div id="header"></div>
 
-    <header>
-        <nav>
-            <div class="container">
-                <h1>Akash Bhagat</h1>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <div class="hero">
-            <div class="container">
-                <h2>Backend Engineer</h2>
-                <p>Building robust, scalable, and secure backend systems.</p>
-                <a href="#contact" class="btn">Get in Touch</a>
-            </div>
-        </div>
-    </header>
+    <!-- Main Content -->
+    <main>
+        <!-- About Section -->
+        <div id="about"></div>
 
-    <section id="about" class="container">
-        <h2>About Me</h2>
-        <div class="about-content">
-            <p>
-                With over 2 years of experience as a Backend Developer, I specialize in designing and optimizing robust systems. I prioritize security best practices and stay updated with emerging technologies. My expertise includes working with relational databases like PostgreSQL and non-relational databases like MongoDB and Redis.
-            </p>
-        </div>
-    </section>
+        <!-- Experience Section -->
+        <div id="experience"></div>
 
-    <section id="experience" class="container">
-        <h2>Professional Experience</h2>
-        <div class="experience-grid">
-            <div class="experience-card">
-                <h3>Novagens</h3>
-                <p>Backend Developer</p>
-                <p>June 2022 – December 2022 | Mohali, India</p>
-            </div>
-            <div class="experience-card">
-                <h3>Wits Innovation Lab</h3>
-                <p>Backend Software Engineer</p>
-                <p>March 2023 – November 2024 | Mohali, India</p>
-            </div>
-        </div>
-    </section>
+        <!-- Projects Section -->
+        <div id="projects"></div>
 
-    <section id="projects" class="container">
-        <h2>Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3>PRMS (Project Management System)</h3>
-                <p>Developed a Jira clone, focusing on server-side functionality and performance optimization.</p>
-            </div>
-            <div class="project-card">
-                <h3>ONDC Ref-Logistics App</h3>
-                <p>Implemented server-side code for a logistics app based on the ONDC protocol.</p>
-            </div>
-            <div class="project-card">
-                <h3>The WIL ONDC Shopify Adapter</h3>
-                <p>Built a Shopify adapter for onboarding sellers into the ONDC network.</p>
-            </div>
-        </div>
-    </section>
+        <!-- Contact Section -->
+        <div id="contact"></div>
+    </main>
 
-    <section id="contact" class="container">
-        <h2>Contact</h2>
-        <div class="contact-info">
-            <p>Email: bhagatakash549@gmail.com</p>
-            <p>Phone: 7508808740</p>
-            <p>Location: Jalandhar, India</p>
-        </div>
-        <div class="social-links">
-            <a href="https://github.com/ab11op" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/akash-bhagat-63b65b193" target="_blank"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </section>
+    <!-- Footer Component -->
+    <div id="footer"></div>
 
-    <footer>
-        <p>&copy; 2023 Akash Bhagat. All rights reserved.</p>
-    </footer>
-
+    <!-- JavaScript Files -->
     <script src="scripts/script.js"></script>
+    <script src="scripts/dark-mode.js"></script>
+
+    <!-- Load Components -->
+    <script>
+        // Load header
+        fetch('components/header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+
+        // Load about section
+        fetch('components/about.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('about').innerHTML = data);
+
+        // Load experience section
+        fetch('components/experience.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('experience').innerHTML = data);
+
+        // Load projects section
+        fetch('components/projects.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('projects').innerHTML = data);
+
+        // Load contact section
+        fetch('components/contact.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('contact').innerHTML = data);
+
+        // Load footer
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 </body>
 </html>

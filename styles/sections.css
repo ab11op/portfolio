@@ -1,0 +1,64 @@
+/* Section Styles */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.experience-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.experience-card, .project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover, .project-card:hover {
+    transform: translateY(-10px);
+}
+
+.experience-card h3, .project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.experience-card p, .project-card p {
+    margin: 5px 0;
+}
+
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #333;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #ff6b6b;
+}

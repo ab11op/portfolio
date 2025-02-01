@@ -1,0 +1,27 @@
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #f4f4f4;
+}
+
+.dark-mode header {
+    background-color: #333;
+}
+
+.dark-mode .hero {
+    background-color: #444;
+}
+
+.dark-mode .experience-card,
+.dark-mode .project-card {
+    background-color: #2c2c2c;
+    color: #f4f4f4;
+}
+
+.dark-mode footer {
+    background-color: #333;
+}
+
+.dark-mode .dark-mode-toggle i {
+    color: #f4f4f4;
+}
