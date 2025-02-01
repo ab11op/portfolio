@@ -1,0 +1,43 @@
+/* Light Mode Styles */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+body.light-mode header {
+    background-color: #fff;
+    border-bottom: 2px solid #00ffcc;
+}
+
+body.light-mode .hero {
+    background-color: #fff;
+}
+
+body.light-mode .experience-card,
+body.light-mode .project-card {
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode footer {
+    background-color: #fff;
+    border-top: 2px solid #00ffcc;
+}
+
+body.light-mode .btn {
+    background-color: #00ffcc;
+    color: #333;
+}
+
+body.light-mode .btn:hover {
+    background-color: #ff6b6b;
+}
+
+body.light-mode a {
+    color: #333;
+}
+
+body.light-mode a:hover {
+    color: #00ffcc;
+}

@@ -1,12 +1,27 @@
 /* Global Styles */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #1a1a1a; /* Dark background */
+    color: #e0e0e0; /* Light text */
     transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1, h2, h3 {
+    font-family: 'Space Mono', monospace;
+    color: #00ffcc; /* Neon green for headings */
+}
+
+a {
+    color: #00ffcc; /* Neon green for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6b6b; /* Neon red for hover */
 }
 
 .container {
@@ -15,3 +30,12 @@ body {
     margin: 0 auto;
     padding: 20px 0;
 }
+
+
+
+
+
+
+
+
+
