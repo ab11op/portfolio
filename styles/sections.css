@@ -65,3 +65,16 @@ section h2 {
 .social-links a:hover {
     color: #ff6b6b; /* Neon red for hover */
 }
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cv-button {
+    margin-left: auto;
+  }
+  

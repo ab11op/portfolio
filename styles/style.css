@@ -31,6 +31,18 @@ a:hover {
     padding: 20px 0;
 }
 
+.tech-list li {
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* Hover effect for technology icons */
+  .tech-list li:hover {
+    transform: scale(1.1);
+    background-color: #8d1212;
+    cursor: pointer;
+  }
+  
+
 
 
 
