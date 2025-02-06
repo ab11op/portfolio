@@ -56,4 +56,10 @@ body.light-mode .theme-toggle {
     margin-left: auto;
   }
   
-
+  /* Mobile Devices */
+@media only screen and (max-width: 600px) {
+    .theme-toggle {
+       display: none;
+    }
+  }
+  
