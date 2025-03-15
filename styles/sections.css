@@ -1,0 +1,141 @@
+/* Section Styles */
+section {
+    padding: 60px 20px; /* Added horizontal padding for smaller screens */
+}
+
+/* Section Headings */
+section h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #00ffcc; /* Neon green for headings */
+}
+
+/* About Content */
+.about-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Responsive Grid Layout for Experience & Projects */
+.experience-grid, .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Better fit for smaller screens */
+    gap: 20px;
+}
+
+/* Experience & Project Cards */
+.experience-card, .project-card {
+    background: #2c2c2c; /* Dark card background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effects */
+.experience-card:hover, .project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 255, 204, 0.3); /* Neon green glow */
+}
+
+/* Card Titles */
+.experience-card h3, .project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #00ffcc; /* Neon green for headings */
+}
+
+/* Card Paragraphs */
+.experience-card p, .project-card p {
+    margin: 5px 0;
+}
+
+/* Contact Info */
+.contact-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Social Links Icons */
+.social-links a {
+    color: #00ffcc; /* Neon green for icons */
+    font-size: 1.5em;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect for Social Icons */
+.social-links a:hover {
+    color: #ff6b6b; /* Neon red on hover */
+    transform: scale(1.1);
+}
+
+/* Navigation Bar */
+.nav-list {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+/* CV Button */
+.cv-button {
+    margin-left: auto;
+    padding: 10px 15px;
+    background: #1a1a1a;
+    color: #1a1a1a;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* CV Button Hover Effect */
+.cv-button:hover {
+    background: #1a1a1a;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media only screen and (max-width: 768px) {
+    section {
+        padding: 40px 10px; /* Adjusted padding for smaller screens */
+    }
+
+    /* Stack nav items vertically */
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    /* Make CV button full width */
+    .cv-button {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* Smaller Mobile Screens */
+@media only screen and (max-width: 480px) {
+    .social-links {
+        gap: 15px;
+    }
+
+    .social-links a {
+        font-size: 1.2em; /* Slightly smaller icons for small screens */
+    }
+}

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Akash Bhagat - Backend Engineer</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/sections.css" />
+    <link rel="stylesheet" href="styles/dark-mode.css" />
+    <link rel="stylesheet" href="styles/light-mode.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;600&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet" />
+    <style>
+        /* Header Container to hold the photo and navigation */
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+        }
+
+        /* Logo container for the photo */
+        .logo-container img {
+            height: 100px;
+            /* Adjust size as needed */
+            width: 100px;
+            border-radius: 10%;
+        }
+
+        /* Navigation styling */
+        .nav {
+            flex: 1;
+            margin-left: 20px;
+        }
+
+        .nav-list {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-list li {
+            margin: 0 10px;
+        }
+
+        /* Push the Download CV button to the right */
+        .cv-button {
+            margin-left: auto;
+        }
+
+        /* Technologies Section Styling */
+        #technologies {
+            margin: 2rem auto;
+            text-align: center;
+        }
+
+        #technologies h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-list {
+            display: inline-flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            justify-content: center;
+        }
+
+        .tech-list li {
+            background: #220707;
+            border-radius: 50%;
+            padding: 1rem;
+            margin: 0.5rem;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Header with Photo and Navigation -->
+    <header>
+        <div class="header-container">
+            <!-- Photo / Logo Section -->
+            <div class="logo-container">
+                <img src="assets/icons/akash.jpg" alt="My Photo">
+            </div>
+            <!-- Navigation -->
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li class="cv-button">
+                        <a href="assets/docs/akash_bhagat_resume.pdf" download>Download CV</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div id="about"></div>
+        <div id="experience"></div>
+        <div id="projects"></div>
+        <!-- Technologies Section -->
+       <section id="technologies">
+            <h2>Technologies I've Worked With</h2>
+            <ul class="tech-list">
+              <li><i class="fab fa-node-js" title="Node.js"></i></li>
+              <li><i class="fab fa-js-square" title="JavaScript"></i></li>
+              <li><i class="fa-solid fa-code" title="TypeScript"></i></li>
+              <li><i class="fab fa-aws" title="AWS"></i></li>
+              <li><i class="fa-solid fa-leaf" title="MongoDB"></i></li>
+              <li><i class="fab fa-docker" title="Docker"></i></li>
+              <li><i class="fa-solid fa-server" title="MySQL"></i></li>
+            </ul>
+          </section>
+        <div id="technologies"></div>
+        <div id="contact"></div>
+
+    </main>
+
+    <!-- Footer Component -->
+    <div id="footer"></div>
+
+    <!-- JavaScript Files -->
+    <script src="scripts/script.js"></script>
+    <script>
+        // Load about section
+        fetch('components/about.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('about').innerHTML = data);
+
+        // Load experience section
+        fetch('components/experience.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('experience').innerHTML = data);
+
+        // Load projects section
+        fetch('components/projects.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('projects').innerHTML = data);
+
+        // Load contact section
+        fetch('components/contact.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('contact').innerHTML = data);
+
+        // Load footer
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+</body>
+
+</html>
